@@ -3,7 +3,7 @@ $(document).ready(function () {
     var incorrectArray = [];
     var amountCorrect = 0;
     var amountIncorrect = 0;
-    var time = 10;
+    var time = 60;
     var answerValue;
     var intervalId;
     var displayIncorrect;
@@ -12,12 +12,16 @@ var displayCorrect;
     
     // Hide questions 
     $(".questions").hide();
+    $("#display").hide();
     $(".scores").hide();
+    $("#finish").hide();
 
     // on click start
     // show div questions
     $("#start").on("click", function () {
         $(".questions").show();
+        $("#finish").show();
+        $("#display").show();
         // display initial value of timer
         $("#time-left").html(time);
         countDown()
@@ -86,6 +90,8 @@ var displayCorrect;
     function stop() {
         clearInterval(intervalId);
         displayScore();
+        $("#start").hide();
+        $("#finish").hide();
     }
 
     function displayScore() {
@@ -97,7 +103,11 @@ var displayCorrect;
         amountIncorrect = incorrectArray.length;
         displayCorrect = $("<div>").text("Correct: " + amountCorrect)
         displayIncorrect =$("<div>").text("Incorrect: " + amountIncorrect);
-        $(".scores").html(displayCorrect, displayIncorrect);
+        $(".scores").append(displayCorrect, displayIncorrect);
+    }
+
+    function replay() {
+        
     }
 
 })

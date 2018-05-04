@@ -1,6 +1,6 @@
 # TriviaGame
 
-This game is a trivia quiz! The user will have a countdown timer to finishe the whole quiz. The user will receive a score regardless if he/she answers all questions or not. There is only one correct answer per question.
+This game is a trivia quiz about Indonesia! The user will have a countdown timer to finish the whole quiz or the user can click finish. The user will receive a score regardless if he/she answers all questions or not. There is only one correct answer per question.
 
 ## Built With
 

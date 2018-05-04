@@ -7,9 +7,9 @@ $(document).ready(function () {
     var answerValue;
     var intervalId;
     var displayIncorrect;
-var displayCorrect;
-    
-    
+    var displayCorrect;
+
+
     // Hide questions 
     $(".questions").hide();
     $("#display").hide();
@@ -19,6 +19,7 @@ var displayCorrect;
     // on click start
     // show div questions
     $("#start").on("click", function () {
+        $("#start").hide();
         $(".questions").show();
         $("#finish").show();
         $("#display").show();
@@ -39,9 +40,9 @@ var displayCorrect;
         // getAnswers()
         getAnswers();
         stop();
-        
+
     });
-    
+
     // User clicks radio buttons, store answers
     $(".radioBtn").click(function (event) {
         //var hold = $(this).val()
@@ -51,31 +52,32 @@ var displayCorrect;
         // }
         // else if (hold === "false") {
         //     amountIncorrect++;
-    
+
         //getAnswers();
 
     })
 
-// push true to an correct array and false to incorrect array
-// lenght of correct and incorrect array will be the score
+    // push true to an correct array and false to incorrect array
+    // lenght of correct and incorrect array will be the score
     function getAnswers() {
         for (i = 1; i < 5; i++) {
             answerValue = $("input[name=q" + i + "]" + ":checked").val();
-           
+
             if (answerValue === "true") {
                 correctArray.push(answerValue);
                 console.log(correctArray)
             }
             else if (answerValue === "false") {
                 incorrectArray.push(answerValue);
-                console.log (incorrectArray)
+                console.log(incorrectArray)
             }
-            
-        }}
 
-   
+        }
+    }
+
+
     function countDown() {
-       intervalId = setInterval(function () {
+        intervalId = setInterval(function () {
             if (time === 0) {
                 $(".questions").hide();
                 stop()
@@ -98,16 +100,16 @@ var displayCorrect;
         $("#display").hide();
         $(".questions").hide();
         $(".scores").show();
-        
-        amountCorrect = correctArray.length;
-        amountIncorrect = incorrectArray.length;
-        displayCorrect = $("<div>").text("Correct: " + amountCorrect)
-        displayIncorrect =$("<div>").text("Incorrect: " + amountIncorrect);
+
+        amountCorrect = correctArray.length - 1;
+        amountIncorrect = incorrectArray.length - 1;
+        displayCorrect = $("<div>").text("Correct: " + amountCorrect + " - Good job!")
+        displayIncorrect = $("<div>").text("Incorrect: " + amountIncorrect);
         $(".scores").append(displayCorrect, displayIncorrect);
     }
 
     function replay() {
-        
+
     }
 
 })

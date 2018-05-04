@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Istok+Web|Skranji" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Gloria+Hallelujah|Pacifico|Slabo+27px" rel="stylesheet">
 
-    <script type="text/javascript" src="assets/javascript/app.js"></script>  
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
     <title>Trivia Game</title>
 
 </head>
@@ -29,6 +29,7 @@
 
             <div class="col-md-12">
 
+
                 <h1> Trivia Game </h1>
                 <h3 id="instructions">Answer questions about Indonesia before time is up! You have 120 seconds. Good luck!</h3>
 
@@ -38,85 +39,97 @@
 
             <div class="col-md-8">
                 <hr>
-
+                <btn id="start" type="button" class="btn btn-dark">Start</btn>
                 <div class="row">
                     <div class="col-md-4"></div>
 
-                        <div class="col-md-4">
-                            <div class="countdown">
-                                <h1 id="countdown">Countdown</h1>
-                                <div id="time-left">
-                                        90SECONDS
-                                </div>
-                            </div>
-                        </div>
-                        
+                    <div class="col-md-4">
+                        <div id="display">
 
-                        <div class="col-md-"></div>
-                    
+                            <h1 id="countdown">Countdown</h1>
+                            <div id="time-left">
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4"></div>
+
                 </div>
                 <br>
+
+                <br>
+                <div class = "scores">
+                    
+                </div>
+
                 <div class="questions">
                     <h2 id="questions-title">Questions</h2>
                     <br>
-
-
                     <h3> 1. What is the capital city of Indonesia?</h3>
 
-                    <form action="">
-                        <input type="radio" name="answer" value="false"> Bandung
+                    <form class="myForm" action="">
+                        <input class="radioBtn" type="radio" name="q1" value= "false" > Bandung
                         <br>
-                        <input type="radio" name="answer" value="true"> Jakarta
+                        <input class="radioBtn" type="radio" name="q1" value= "true"> Jakarta
                         <br>
-                        <input type="radio" name="answer" value="false"> Sumatra
+                        <input class="radioBtn" type="radio" name="q1" value= "false" > Sumatra
                         <br>
                     </form>
                     <br>
                     <h3> 2. Which island attracts the largest tourists?</h3>
 
-                    <form action="">
-                        <input type="radio" name="answer" value="true"> Bali
+                    <form class="myForm" action="">
+                        <input class="radioBtn" type="radio" name="q2" value= "true"> Bali
                         <br>
-                        <input type="radio" name="answer" value="false"> Sumatra
+                        <input class="radioBtn" type="radio" name="q2" value= "false" > Sumatra
                         <br>
-                        <input type="radio" name="answer" value="false"> Java
+                        <input class="radioBtn" type="radio" name="q2" value= "false" > Java
                         <br>
                     </form>
                     <br>
                     <h3> 3. How many islands are in Indonesia officially?</h3>
 
 
-                    <form action="">
-                        <input type="radio" name="answer" value="false"> 1
+                    <form class="myForm" action="">
+                        <input class="radioBtn" type="radio" name="q3" value= "false" > 1
                         <br>
-                        <input type="radio" name="answer" value="false"> 198
+                        <input class="radioBtn" type="radio" name="q3" value= "false" > 198
                         <br>
-                        <input type="radio" name="answer" value="true"> 13,466
+                        <input class="radioBtn" type="radio" name="q3" value= "true"> 13,466
                         <br>
                     </form>
                     <br>
 
-                    <h3> 4. Which of these facts are false about Bali?</h3>
-                    <form action="">
-                        <input type="radio" name="answer" value="false"> Bali is an active volcano.
+                    <h3> 4. Which of these facts are "false" about Bali?</h3>
+                    <form class="myForm" action="">
+                        <input class="radioBtn" type="radio" name="q4" value= "false" > Bali is an active volcano.
                         <br>
-                        <input type="radio" name="answer" value="false"> You need to ride a boat to the island.
+                        <input class="radioBtn" type="radio" name="q4" value= "false" > You need to ride a boat to the island.
                         <br>
-                        <input type="radio" name="answer" value="true"> Bali is mostly a hindu island.
+                        <input class="radioBtn" type="radio" name="q4" value= "true"> Bali is mostly a hindu island.
                         <br>
                     </form>
-
                 </div>
-            </div>
+                
 
+
+
+
+
+
+            </div>
 
             <div class="col-md-2">
 
 
             </div>
+            <btn id="finish" type="button" class="btn btn-dark">Finish</btn>
 
         </div>
-
     </div>
 
 
